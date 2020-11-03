@@ -2,6 +2,12 @@
 
 <ul>
     <li>Height: <%= @user.height %></li>
-    <li>Mood: <%= @user.mood %></li>
     <li>Tickets: <%= @user.tickets %></li>
+    <% if @user.admin %>
+        <p>"ADMIN"</p>
+    <% else %>
+        Mood: <%= @user.mood %></li>
+    <% end %>
 </ul>
+
+<%= link_to "See attractions", %>
