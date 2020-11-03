@@ -1,5 +1,11 @@
 <h1><%= @user.name %></h1>
 
+<% if flash[:message] %>
+  <div class="center alert">
+    <p><%= flash[:message] %></p>
+  </div>
+<% end %>
+
 <ul>
     <li>Height: <%= @user.height %></li>
     <li>Tickets: <%= @user.tickets %></li>
@@ -10,4 +16,4 @@
     <% end %>
 </ul>
 
-<%= link_to "See attractions", %>
+<%= link_to "See attractions", attractions_path %>
